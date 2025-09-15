@@ -5,7 +5,7 @@ let normalMessage = document.querySelector(".normal-message");
 let errorMessage = document.querySelector(".error-message");
 let addedMessage = document.querySelector(".added-message");
 
-// Function to get the date
+//  get the date
 let date = new Date().getDate();
 let months_name = [
   "January",

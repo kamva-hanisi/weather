@@ -46,16 +46,26 @@ nav ul li a {
 }
 /*  */
 .city-name {
-  color: var(--red-color);
+  color: var(--font-color-main);
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
-  gap: 5px;
+  gap: 15px;
+}
+.city-name h1 {
+  color: var(--red-color);
+}
+.city-name h1:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 .city-name i {
   font-size: 20px;
 }
+/* .location-icon {
+  color: yellow;
+} */
 .weather-icon-css {
   display: flex;
   justify-content: center;
