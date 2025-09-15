@@ -7,11 +7,13 @@
   font-family: "Rubik", sans-serif;
 }
 :root {
+  --background-color: #746ab0;
   --font-color-main: #332464;
   --white-color: #fff;
+  --red-color: #e74c3c;
 }
 body {
-  background-color: #b4d6f3;
+  background-color: #288bab;
 }
 
 #screen {
@@ -26,7 +28,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 70px;
-  background-color: var(--font-color-main);
+  background-color: var(--background-color);
 }
 nav ul {
   display: flex;
@@ -44,7 +46,7 @@ nav ul li a {
 }
 /*  */
 .city-name {
-  color: var(--font-color-main);
+  color: var(--red-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +84,7 @@ nav ul li a {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  color: var(--font-color-main);
+  color: var(--red-color);
 }
 .show-metric {
   padding-left: 30px;
@@ -105,7 +107,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   padding: 20px 10px;
-  color: var(--font-color-main);
+  color: var(--red-color);
 }
 .today-forecast {
   width: 110px;
