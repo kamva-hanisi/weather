@@ -101,3 +101,43 @@ async function city(cityName) {
     return "";
   }
 }
+
+// adding section
+let section = document.querySelector(".add-section");
+let navBtn = document.querySelector(".button");
+let navIcon = document.querySelector(".btn-icon");
+
+navBtn.addEventListener("click", () => {
+  if (section.style.top === "-60rem") {
+    section.style.top = "100px";
+    navIcon.className = "fa-solid fa-circle-xmark";
+  } else {
+    section.style.top = "-60rem";
+    navIcon.className = "fa-solid fa-circle-plus";
+  }
+});
+
+searchinput.addEventListener("keydown", async function (event) {
+  if (event.keyCode === 13 || event.which === 13) {
+    const weatherInfo = await city(searchinput.value);
+    if (weatherInfo) {
+      normalMessage.style.display = "none";
+      errorMessage.style.display = "none";
+      addedMessage.style.display = "block";
+    } else {
+      normalMessage.style.display = "none";
+      errorMessage.style.display = "block";
+      addedMessage.style.display = "none";
+    }
+    box.prepend(weatherInfo);
+  }
+});
+
+city("Johannesburg");
+city("Pretoria");
+city("Durban");
+city("Port Elizabeth");
+city("Bloemfontein");
+city("Nelspruit");
+city("King William's Town");
+city("Cape Town");
