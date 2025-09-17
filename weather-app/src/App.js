@@ -1,90 +1,43 @@
 import React from "react";
-import "./App.css"; // or "./style.css" if you renamed it
-import sunIcon from "./assets/sun.png";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./components/Home";
+import Search from "./components/Search";
+import Globe from "./components/Globe";
+import "./App.css";
 
 function App() {
   return (
-    <div id="screen">
-      {/* City name */}
-      <div className="city-name">
-        <i className="fa-solid fa-location-dot"></i>
-        <h1 id="city-name">Gauteng</h1>
+    <Router>
+      <div id="container">
+        {/* Page Routes */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/globe" element={<Globe />} />
+        </Routes>
+
+        {/* ✅ Navbar stays at the bottom */}
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                <i className="fa-solid fa-location-arrow"></i>
+              </Link>
+            </li>
+            <li>
+              <Link to="/search">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </Link>
+            </li>
+            <li>
+              <Link to="/globe">
+                <i className="fa-solid fa-earth-americas"></i>
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      {/* Weather icon */}
-      <div className="weather-icon-css">
-        <img className="weather-icon" src={sunIcon} alt="Sunny weather icon" />
-      </div>
-
-      {/* Details */}
-      <div className="weather-description">
-        <div className="show-metric" id="metric">
-          0°
-        </div>
-        <div className="weather-details">
-          <div className="weather-main" id="weather-main">
-            Sunshine
-          </div>
-          <div className="h-f">
-            <div className="show-humidity">
-              H: <span id="humidity">55</span>
-            </div>
-            ||
-            <div className="show-humidity">
-              F: <span id="feels-like">55</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Forecasts */}
-      <div className="forcasts-box">
-        <div className="today-forecast">
-          <h4>TODAY</h4>
-          <div className="weather-icon-today">
-            <img
-              className="weather-icons"
-              src={sunIcon}
-              alt="Sunny weather icon"
-            />
-          </div>
-          <div className="temp-today">
-            <span id="temp-min-today">36°</span>
-            <span>/ </span>
-            <span id="temp-max-today">40°</span>
-          </div>
-          <div className="weather-main-today" id="weather-main">
-            Sunshine
-          </div>
-        </div>
-
-        <div className="future-forecast">
-          <h5>4-DAYS FORECAST</h5>
-          <div id="future-forecast-box"></div>
-        </div>
-      </div>
-
-      {/* Nav */}
-      <nav>
-        <ul>
-          <li>
-            <a className="active" href="#home">
-              <i className="fa-solid fa-location-arrow"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#search">
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#globe">
-              <i className="fa-solid fa-earth-americas"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    </Router>
   );
 }
 
