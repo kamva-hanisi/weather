@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css";
-import sunIcon from "../public/images/sun.png";
+import "./App.css"; // or "./style.css" if you renamed it
+import sunIcon from "./assets/sun.png";
 
 function App() {
   return (
