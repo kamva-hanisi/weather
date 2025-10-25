@@ -1,8 +1,10 @@
 import React from "react";
+import "./script/main.js";
 import sunIcon from "../assets/sun.png";
 import "../components/Style/Home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faLocationDot,
   faLocationArrow,
   faMagnifyingGlass,
   faEarthAmericas,
@@ -13,7 +15,7 @@ function Home() {
     <div id="screen">
       {/* City name */}
       <div className="city-name">
-        <i className="fa-solid fa-location-dot"></i>
+        <FontAwesomeIcon icon={faLocationDot} />
         <h1 id="city-name">Gauteng</h1>
       </div>
 

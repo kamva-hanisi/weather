@@ -1,4 +1,5 @@
 import React from "react";
+// import "./script/globe.js";
 import "../components/Style/globe.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
